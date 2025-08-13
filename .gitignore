@@ -1,0 +1,30 @@
+# Fichiers d'état de Terraform
+*.tfstate
+*.tfstate.backup
+*.tfplan
+
+# Crash logs
+crash.log
+
+# Répertoire de verrouillage local
+.terraform/
+
+# Override local (non partagé)
+terraform.tfvars
+terraform.tfvars.json
+
+# Override locaux auto-générés
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# .terraform.lock.hcl est généralement versionné, mais tu peux l'ignorer si tu préfères éviter le lockfile
+# .terraform.lock.hcl
+
+# Fichiers système
+.DS_Store
+.idea/
+.vscode/
+*.swp
+.idea
