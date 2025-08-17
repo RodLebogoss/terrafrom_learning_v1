@@ -13,7 +13,7 @@ resource "aws_instance" "Mask_single_web_server" {
   user_data = <<-EOF
               #!/bin/bash
               echo "Hello world" > index.html 
-              nohup busybox httpd -f -p 8080 &
+              nohup busybox httpd -f -p ${var.server_port} &
 
               EOF                       
   user_data_replace_on_change = true
@@ -29,8 +29,8 @@ resource "aws_security_group" "Mask_sg" {
   name = "Mask_Security_Group_example"
 
   ingress {
-    from_port = 8080
-    to_port = 8080
+    from_port = var.server_port
+    to_port = var.server_port
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
