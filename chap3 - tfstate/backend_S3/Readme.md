@@ -1,0 +1,1 @@
+Il faut créer la ressource puis créer le backend.tf qui permettra de stocker le fichier tfstate sur le s3.
